@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        
+        link(rel='stylesheet', href='/styles/style.css')
+
+         
+    body
+        h2 Simple User Manager
+        a(href='/create')
+            button Add User
+        p
+        p
+        table(style='', border='1')
+            tr
+                th Name
+                th UserID
+                th Email
+                th Age
+                th 
+            each user, index in users
+                tr
+                    td #{user.name}
+                    td #{user.userId} 
+                    td #{user.email}
+                    td #{user.age}
+                    td 
+                        a(href='/users/' + index)
+                            button Edit
+                        form(action="/delete/" + index, method='post')
+                            button(type='submit') Delete
+                    p
