@@ -1,0 +1,7 @@
+# My local files that I do not want in the container
+Dockerfile
+README.md
+
+# Note, you should avoide copying the lock files and NodeJS module folder
+node_modules
+package-lock.json
